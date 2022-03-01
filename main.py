@@ -128,17 +128,17 @@ def format_message(atm_info):
 
 bot = telebot.TeleBot(BOT_PRIVATE_KEY, parse_mode=None)
 
-
-@bot.message_handler(commands=["new"])
-def start(m, res=False):
-    for key, atm in get_atms_with_cash().items():
-        message = format_message(atm)
-        bot.send_message(m.chat.id, message)
-        bot.send_location(m.chat.id, latitude=atm.get('location_lat'), longitude=atm.get('location_lng'),
-                          disable_notification=True)
-
-
-bot.polling(none_stop=True, interval=0)
+#
+# @bot.message_handler(commands=["new"])
+# def start(m, res=False):
+#     for key, atm in get_atms_with_cash().items():
+#         message = format_message(atm)
+#         bot.send_message(m.chat.id, message)
+#         bot.send_location(m.chat.id, latitude=atm.get('location_lat'), longitude=atm.get('location_lng'),
+#                           disable_notification=True)
+#
+#
+# bot.polling(none_stop=True, interval=0)
 
 available_atm_ids = dict().keys()
 while True:
