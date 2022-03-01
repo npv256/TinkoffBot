@@ -122,8 +122,7 @@ def format_message(atm_info):
                           f'Макс: {curr.get("max")}\n' \
                           f'Доступно: {curr.get("amount") or 0}\n_____\n'
     return f'\n{atm_info.get("brand_name")} {currencies_str}' \
-           f'Адрес: {atm_info.get("address")} \n' \
-           f'Актуальность: {date_time}'
+           f'Адрес: {atm_info.get("address")}' \
 
 
 bot = telebot.TeleBot(BOT_PRIVATE_KEY, parse_mode=None)
