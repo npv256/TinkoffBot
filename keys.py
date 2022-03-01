@@ -1,2 +1,2 @@
 # Key tg bot
-BOT_PRIVATE_KEY = ''
+BOT_PRIVATE_KEY = '5231378226:AAEyIUbbyN_ta3bAztACcU0C_4iKq9Jkkt0'
